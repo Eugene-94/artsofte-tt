@@ -1,0 +1,287 @@
+.card {
+  box-sizing: border-box;
+
+  position: relative;
+
+  width: 330px;
+  padding: 10px;
+  margin-bottom: 19px;
+
+  outline: 1px solid #efe2f4;
+}
+
+.card:hover .card__hover {
+  display: block;
+}
+
+.card:hover .card__rating {
+  display: none;
+}
+
+.card__rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+
+  padding: 2px 7px;
+  padding-top: 8px;
+
+  background-color: #ffffff;
+}
+
+.card__rating-hover {
+  margin-bottom: 16.5px;
+}
+
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__header {
+  margin-top: 18px;
+  padding-left: 13px;
+  padding-right: 3px;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 1.75em;
+
+  &--hover {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--golden-cost {
+    margin-top: 20px;
+    padding-left: 16px;
+
+    letter-spacing: 0.055em;
+  }
+}
+
+.card__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.card__feature-item {
+  box-sizing: border-box;
+
+  position: relative;
+
+  width: calc((100% - 7px) / 2);
+  padding: 17px 0;
+  margin: 0;
+  margin-bottom: 8px;
+  padding-left: 40px;
+
+  text-align: left;
+  font-size: 14px;
+  color: #ffffff;
+
+  background-color: #ef3d44;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    display: block;
+    height: 14px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--departure::before {
+    width: 11px;
+
+    background-image: url('../img/departure-icon.png');
+  }
+
+  &--date::before {
+    width: 15px;
+
+    background-image: url('../img/date-icon.png');
+  }
+
+  &--duration::before {
+    width: 14px;
+
+    background-image: url('../img/duration-icon.png');
+  }
+
+  &--breakfast::before {
+    width: 12px;
+    height: 16px;
+
+    background-image: url('../img/breakfast-icon.png');
+  }
+}
+
+.card__feature-item--departure::before {
+
+}
+
+.card__title {
+  display: inline;
+
+  font-family: "PragmaticaLightC", Arial;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+
+  &--hover {
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+  }
+
+  &--golden-cost {
+    letter-spacing: 0.025em;
+  }
+}
+
+.card__location {
+  margin: 0;
+  margin-top: 4px;
+
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.card__prices {
+  display: flex;
+  align-items: baseline;
+  padding-left: 15px;
+  margin-top: 13px;
+  flex-grow: 1;
+
+  letter-spacing: 0.045em;
+
+  &--hover {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 22.5px;
+  }
+}
+
+.card__new-price {
+  margin: 0;
+  margin-right: 11px;
+
+  font-size: 32px;
+  color: #ed1c24;
+
+  &--hover {
+    margin: 0;
+    order: 1;
+
+    color: #ffffff;
+  }
+}
+
+.card__old-price {
+  margin: 0;
+
+  font-size: 14px;
+  text-decoration: line-through;
+
+  &--hover {
+    margin: 0;
+    margin-bottom: 5px;
+    order: 0;
+
+    color: #ffffff;
+  }
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+
+  &--hover {
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+.card__info {
+  width: calc((100% - 6px) / 3);
+  padding: 10px 0;
+  margin: 0;
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  background-color: #f9f8f8;
+}
+
+.card__number {
+  margin: 0;
+  order: 2;
+
+  font-family: "PragmaticaLightC", Arial;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+}
+
+.card__link {
+  &--hover {
+    box-sizing: border-box;
+
+    display: block;
+    width: 115px;
+    border: 1px solid #ef3d44;
+    padding: 15px 0;
+    margin-top: 14px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #ef3d44;
+    }
+  }
+}
+
+.card__hover {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 0 27px;
+  padding-right: 25px;
+  padding-top: 25px;
+
+  background-color: #ed1c24;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 330px;
+  }
+}

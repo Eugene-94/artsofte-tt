@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Artsofte-test-task</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <div class="page-header__logo"></div>
+        <button class="page-header__menu-btn page-header__menu-btn--open page-header__menu-btn--nojs" type="button">
+          <span class="visually-hidden">Кнопка открытия и закрытия меню</span>
+        </button>
+        <div class="page-header__user-menu page-header__user-menu--nojs">
+          <nav class="page-header__nav">
+            <ul class="page-header__nav-list">
+              <li class="page-header__nav-item">
+                <a class="page-header__nav-link" href="#">Туристам</a>
+              </li>
+              <li class="page-header__nav-item">
+                <a class="page-header__nav-link" href="#">Информация</a>
+              </li>
+              <li class="page-header__nav-item">
+                <a class="page-header__nav-link" href="#">Агентам</a>
+              </li>
+              <li class="page-header__nav-item">
+                <a class="page-header__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__contacts">
+            <p class="page-header__city">
+              Ваш город:
+              <a class="page-header__city-link" href="#">Екатеринбург</a>
+            </p>
+            <p class="page-header__phone">
+              <a class="page-header__phone-link" href="tel:+734333431111">+7(343) 3343 11-11</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-content">
+      <div class="page-content__wrapper container">
+        <ul class="page-content__breadcrumbs">
+          <li class="page-content__breadcrumbs-item">
+            <a class="page-content__breadcrumbs-link" href="#">Главная</a>
+          </li>
+          <li class="page-content__breadcrumbs-item">
+            <a class="page-content__breadcrumbs-link" href="#">Туристам</a>
+          </li>
+          <li class="page-content__breadcrumbs-item">
+            <a class="page-content__breadcrumbs-link" href="#">Горячие туры</a>
+          </li>
+        </ul>
+        <h1 class="page-content__title">Горящие туры</h1>
+
+        <form class="search-form" action="#" method="GET">
+          <fildset class="search-form__section">
+            <legend class="search-form__title">
+              <label class="search-form__label" for="departure">Город вылета</label>
+            </legend>
+            <input class="search-form__input" id="departure" type="text" name="departure">
+          </fildset>
+          <fildset class="search-form__section">
+            <legend class="search-form__title">
+              <label class="search-form__label" for="countries">Список стран</label>
+            </legend>
+            <input class="search-form__input" id="countries" type="text" name="countries">
+          </fildset>
+          <fildset class="search-form__section search-form__section--resort">
+            <legend class="search-form__title">
+              <label class="search-form__label" for="resort">Курорт</label>
+            </legend>
+            <input class="search-form__input" id="resort" type="text" name="resort">
+          </fildset>
+          <fildset class="search-form__section">
+            <legend class="search-form__title">
+              <label class="search-form__label" for="duration">Максимальное количество дней</label>
+            </legend>
+            <input class="search-form__input" id="duration" type="text" name="duration">
+            <button class="search-form__calendar" type="button">
+              <span class="visually-hidden">Календарь</span>
+            </button>
+          </fildset>
+          <fildset class="search-form__section search-form__section--category">
+            <legend class="search-form__title search-form__title--category">Категория отеля</legend>
+            <div class="search-form__stars" id="reviewStars-input">
+              <input class="search-form__radio visually-hidden" id="star-5" type="radio" name="rating">
+              <label class="search-form__radio-label" for="star-5">
+                <svg class="search-form__rating-icon" width="17" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                 <g>
+                  <polygon points="8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 16.449615478515625,7.346431744255142 11.886104583740234,11.133331168262885 13.544437408447266,17.132957458496094 8.843767166137695,13.552695728342314 4.143108367919922,17.132957458496094 5.8014421463012695,11.133331168262885 1.2379306554794312,7.346431744255142 6.9635114669799805,7.2187203423454775 8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 " strokeWidth="2" strokecolor="#000000" orient="point" r2="8.600788" r="21.50197" point="5" shape="star" id="svg_3" cy="62.174996" cx="236.000021"/>
+                 </g>
+                </svg>
+              </label>
+
+              <input class="search-form__radio visually-hidden" id="star-4" type="radio" name="rating">
+              <label class="search-form__radio-label" for="star-4">
+                <svg class="search-form__rating-icon" width="17" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                 <g>
+                  <polygon points="8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 16.449615478515625,7.346431744255142 11.886104583740234,11.133331168262885 13.544437408447266,17.132957458496094 8.843767166137695,13.552695728342314 4.143108367919922,17.132957458496094 5.8014421463012695,11.133331168262885 1.2379306554794312,7.346431744255142 6.9635114669799805,7.2187203423454775 8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 " strokeWidth="2" strokecolor="#000000" orient="point" r2="8.600788" r="21.50197" point="5" shape="star" id="svg_3" cy="62.174996" cx="236.000021"/>
+                 </g>
+                </svg>
+              </label>
+
+              <input class="search-form__radio visually-hidden" id="star-3" type="radio" name="rating">
+              <label class="search-form__radio-label" for="star-3">
+                <svg class="search-form__rating-icon" width="17" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                 <g>
+                  <polygon points="8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 16.449615478515625,7.346431744255142 11.886104583740234,11.133331168262885 13.544437408447266,17.132957458496094 8.843767166137695,13.552695728342314 4.143108367919922,17.132957458496094 5.8014421463012695,11.133331168262885 1.2379306554794312,7.346431744255142 6.9635114669799805,7.2187203423454775 8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 " strokeWidth="2" strokecolor="#000000" orient="point" r2="8.600788" r="21.50197" point="5" shape="star" id="svg_3" cy="62.174996" cx="236.000021"/>
+                 </g>
+                </svg>
+              </label>
+
+              <input class="search-form__radio visually-hidden" id="star-2" type="radio" name="rating">
+              <label class="search-form__radio-label" for="star-2">
+                <svg class="search-form__rating-icon" width="17" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                 <g>
+                  <polygon points="8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 16.449615478515625,7.346431744255142 11.886104583740234,11.133331168262885 13.544437408447266,17.132957458496094 8.843767166137695,13.552695728342314 4.143108367919922,17.132957458496094 5.8014421463012695,11.133331168262885 1.2379306554794312,7.346431744255142 6.9635114669799805,7.2187203423454775 8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 " strokeWidth="2" strokecolor="#000000" orient="point" r2="8.600788" r="21.50197" point="5" shape="star" id="svg_3" cy="62.174996" cx="236.000021"/>
+                 </g>
+                </svg>
+              </label>
+
+              <input class="search-form__radio visually-hidden" id="star-1" type="radio" name="rating">
+              <label class="search-form__radio-label" for="star-1">
+                <svg class="search-form__rating-icon" width="17" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                 <g>
+                  <polygon points="8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 16.449615478515625,7.346431744255142 11.886104583740234,11.133331168262885 13.544437408447266,17.132957458496094 8.843767166137695,13.552695728342314 4.143108367919922,17.132957458496094 5.8014421463012695,11.133331168262885 1.2379306554794312,7.346431744255142 6.9635114669799805,7.2187203423454775 8.843767166137695,1.2980276032766085 10.724035263061523,7.2187203423454775 " strokeWidth="2" strokecolor="#000000" orient="point" r2="8.600788" r="21.50197" point="5" shape="star" id="svg_3" cy="62.174996" cx="236.000021"/>
+                 </g>
+                </svg>
+              </label>
+            </div>
+            <input class="search-form__checkbox" id="max-rating" type="checkbox" name="max-rating">
+            <label class="search-form__label search-form__label--category" for="max-rating">Или более звезд</label>
+          </fildset>
+          <button class="search-form__submit" type="submit">Найти туры</button>
+        </form>
+
+        <section class="page-content__results">
+          <h2 class="visually-hidden">Найденные туры</h2>
+          <div class="page-content__tours-amount">Найдено туров: <span class="amount"><b>34</b></span></div>
+
+          <ul class="page-content__sort">
+            <li class="page-content__sort-item">
+              <a class="page-content__sort-link" href="#">По имени</a>
+            </li>
+            <li class="page-content__sort-item">
+              <a class="page-content__sort-link" href="#">По цене</a>
+            </li>
+            <li class="page-content__sort-item">
+              <a class="page-content__sort-link" href="#">По рейтингу</a>
+            </li>
+          </ul>
+
+          <div class="page-content__tours">
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card1.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Сан-Сиро,&#32;</a>
+                  </h3>
+                  Болгария
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">64 523 ₽</p>
+                  <p class="card__old-price">88 300 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/two-stars-hover.png" alt="Рейтинг две звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Сан-Сиро</h3>
+                  <p class="card__location">Болгария</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">64 523 ₽</p>
+                    <p class="card__old-price card__old-price--hover">88 300 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card2.jpg" alt="Сан-Сиро">
+                <div class="card__header card__header--golden-cost">
+                  <h3 class="card__title card__title--golden-cost">
+                    <a class="card__link" href="#">Золотой Берег-Терло,&#32;</a>
+                  </h3>
+                  Пицунда, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">85 236 ₽</p>
+                  <p class="card__old-price">96 566 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/two-stars-hover.png" alt="Рейтинг две звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Золотой Берег-Терло</h3>
+                  <p class="card__location">Пицунда, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">85 236 ₽</p>
+                    <p class="card__old-price card__old-price--hover">96 566 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/four-stars.png" alt="Рейтинг четыре звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card3.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Ива гостиница,&#32;</a>
+                  </h3>
+                  Новый Афон, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">75 233 ₽</p>
+                  <p class="card__old-price">85 600 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/four-stars-hover.png" alt="Рейтинг четыре звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Ива гостиница</h3>
+                  <p class="card__location">Новый Афон, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">75 233 ₽</p>
+                    <p class="card__old-price card__old-price--hover">85 600 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card4.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Джанат,&#32;</a>
+                  </h3>
+                  Сухум, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">52 465 ₽</p>
+                  <p class="card__old-price">88 300 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/two-stars-hover.png" alt="Рейтинг две звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Джанат</h3>
+                  <p class="card__location">Сухум, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">52 465 ₽</p>
+                    <p class="card__old-price card__old-price--hover">88 300 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card4.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Эвкалипт,&#32;</a>
+                  </h3>
+                  Сухум, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">85 236 ₽</p>
+                  <p class="card__old-price">96 566 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/tree-stars-hover.png" alt="Рейтинг три звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Эвкалипт</h3>
+                  <p class="card__location">Сухум, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">85 236 ₽</p>
+                    <p class="card__old-price card__old-price--hover">96 566 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/four-stars.png" alt="Рейтинг четыре звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card6.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Парус Пансионат Пицунда,&#32;</a>
+                  </h3>
+                  Гадаута, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">75 233 ₽</p>
+                  <p class="card__old-price">85 600 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__rating-hover">
+                  <div class="card__rating-hover">
+                    <img src="img/four-stars-hover.png" alt="Рейтинг четыре звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Парус Пансионат Пицунда</h3>
+                  <p class="card__location">Гадаута, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">75 233 ₽</p>
+                    <p class="card__old-price card__old-price--hover">85 600 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card7.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Афон Дакир,&#32;</a>
+                  </h3>
+                  Новый Афон, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">55 455 ₽</p>
+                  <p class="card__old-price">88 300 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/two-stars-hover.png" alt="Рейтинг две звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Афон Дакир</h3>
+                  <p class="card__location">Новый Афон, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">55 455 ₽</p>
+                    <p class="card__old-price card__old-price--hover">88 300 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/two-stars.png" alt="Рейтинг две звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card8.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Ахра Гостевой дом,&#32;</a>
+                  </h3>
+                  Гагра, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">54 834 ₽</p>
+                  <p class="card__old-price">96 566 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover">
+                    <img src="img/two-stars-hover.png" alt="Рейтинг две звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Афон Дакир</h3>
+                  <p class="card__location">Новый Афон, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">54 834 ₽</p>
+                    <p class="card__old-price card__old-price--hover">96 566 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__rating">
+                <img src="img/four-stars.png" alt="Рейтинг четыре звезды">
+              </div>
+              <div class="card__inner">
+                <img src="img/card9.jpg" alt="Сан-Сиро">
+                <div class="card__header">
+                  <h3 class="card__title">
+                    <a class="card__link" href="#">Парус Пансионат Пицунда,&#32;</a>
+                  </h3>
+                  Гадаута, Абхазия
+                </div>
+                <div class="card__prices">
+                  <p class="card__new-price">55 796 ₽</p>
+                  <p class="card__old-price">85 600 ₽</p>
+                </div>
+                <div class="card__footer">
+                  <p class="card__info card__info--departure">Из Москвы</p>
+                  <p class="card__info card__info--date">24 июня</p>
+                  <p class="card__info card__info--duration">7 ночей</p>
+                </div>
+              </div>
+              <div class="card__hover">
+                <div class="card__header card__header--hover">
+                  <div class="card__rating-hover" >
+                    <img src="img/four-stars-hover.png" alt="Рейтинг четыре звезды">
+                  </div>
+                  <h3 class="card__title card__title--hover">Парус Пансионат Пицунда</h3>
+                  <p class="card__location">Гадаута, Абхазия</p>
+                </div>
+                <div class="card__features">
+                  <p class="card__feature-item card__feature-item--departure">Из Москвы</p>
+                  <p class="card__feature-item card__feature-item--date">24 июня</p>
+                  <p class="card__feature-item card__feature-item--duration">7 ночей</p>
+                  <p class="card__feature-item card__feature-item--breakfast">Завтрак</p>
+                </div>
+                <div class="card__footer card__footer--hover">
+                  <div class="card__prices card__prices--hover">
+                    <p class="card__new-price card__new-price--hover">55 796 ₽</p>
+                    <p class="card__old-price card__old-price--hover">85 600 ₽</p>
+                    <p class="card__number">с человека</p>
+                  </div>
+                  <a class="card__link card__link--hover" href="#">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="page-content__promo">
+          <h2 class="page-content__promo-title">Уверенность в путешествиях</h2>
+          <div class="page-content__promo-items">
+            <p class="page-content__promo-item">
+              Сегодня Artsofte это веб-интегратор, разрабатывающий&nbsp;сложные программные решения и системы самообслуживания
+              клиентов с применением мобильных и веб-технологий для финансового сектора,&nbsp;телекоммуникационных компаний и авиа
+              отрасли. Также, среди наших собственных продуктов, есть лидирующие в своих отраслях облачные решения для
+              недвижимости и автобизнеса.
+            </p>
+            <p class="page-content__promo-item">
+              Сегодня Artsofte это веб-интегратор, разрабатывающий&nbsp;сложные программные решения и системы самообслуживания
+              клиентов с применением мобильных и веб-технологий для финансового сектора,&nbsp;телекоммуникационных компаний и авиа
+              отрасли. Также, среди наших собственных продуктов, есть лидирующие в своих отраслях облачные решения для
+              недвижимости и автобизнеса.
+            </p>
+            <p class="page-content__promo-item">
+              Сегодня Artsofte это веб-интегратор, разрабатывающий&nbsp;сложные программные решения&nbsp;и&nbsp;системы самообслуживания
+              клиентов&nbsp;с&nbsp;применением мобильных и продуктов,&nbsp;есть&nbsp;лидирующие в своих отраслях облачные решения для недвижимости
+              и автобизнеса.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <div class="page-footer__top">
+          <div class="page-footer__section page-footer__section--popular">
+            <h2 class="page-footer__title">Популярные страны</h2>
+            <a class="page-footer__link page-footer__link--popular" href="#">Китай</a>
+            <a class="page-footer__link page-footer__link--popular" href="#">Таиланд</a>
+            <a class="page-footer__link page-footer__link--popular" href="#">Чехия</a> <br>
+            <a class="page-footer__link page-footer__link--popular" href="#">Франция</a>
+            <a class="page-footer__link page-footer__link--popular" href="#">Греция</a>
+          </div>
+          <div class="page-footer__section page-footer__section--nav">
+            <a class="page-footer__link page-footer__link--nav" href="#">О компании</a>
+            <a class="page-footer__link page-footer__link--nav" href="#">Информация</a>
+            <a class="page-footer__link page-footer__link--nav" href="#">Корпоративным клиентам</a>
+          </div>
+          <div class="page-footer__section page-footer__section--collections">
+            <h2 class="page-footer__title">Коллекции туров</h2>
+            <a class="page-footer__link page-footer__link--collections" href="#">Свадебные туры</a>
+            <a class="page-footer__link page-footer__link--collections" href="#">Круизы</a>
+            <a class="page-footer__link page-footer__link--collections" href="#">Активный&nbsp;отдых</a>
+            <a class="page-footer__link page-footer__link--collections" href="#">Здоровье&nbsp;и&nbsp;спа</a>
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="page-footer__section page-footer__section--offices">
+            Центральный офис:
+            <p class="page-footer__main-office">Екатеринбург</p>
+            <a class="page-footer__offices-link" href="#">Другие офисы</a>
+          </div>
+          <div class="page-footer__section page-footer__section--copyright">
+            &#169; 2004-2015 <br>
+            Все права защищены. <a href="#">Карта сайта</a>
+          </div>
+          <div class="page-footer__section page-footer__section--social">
+            <div class="page-footer__social-links">
+              <a class="page-footer__social-link page-footer__social-link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+              <a class="page-footer__social-link page-footer__social-link--fb" href="#"><span class="visually-hidden">Facebook</span></a>
+            </div>
+            <a class="page-footer__subscribe" href="#">Подписаться на рассылку</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
